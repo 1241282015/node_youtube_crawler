@@ -1,0 +1,15 @@
+
+<div ng-controller="videoController as vm">
+    <p>{{test}}</p>
+
+    <table ng-table="vm.tableParams" class="table" show-filter="true">
+
+        <tbody >
+            <tr  ng-repeat="video in videoInfo">
+                <td title="'title">{{video.title}}</td>
+                <td title="category" sortable="'category'">{{video.category}}</td>
+                <td title="originUrl"><a href="{{video.originUrl}}">{{video.originUrl}}</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
